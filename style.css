@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+/* Start of navigation */
+.mainNav{
+    min-height: 25vh;
+    width: 100%;
+    background-color: #5a7262;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.cont{
+    max-width: 90%;
+    min-height: 25vh;
+    margin: 0 auto;
+    display: flex;
+}
+
+.social{
+    width: 20%;
+    min-height: 100%;
+}
+
+.social ul{
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+}
+
+.social ul li{
+    padding: 0 18px 0 0;
+}
+
+.social ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.social ul li a:hover{
+    color: #fcefd5;
+}
+
+.middle{
+    width: 60%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.middle h1{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.middle ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 40px;
+    width: 80%;
+}
+
+.middle ul li{
+    padding: 0 10px;
+}
+
+.middle ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.middle ul li a:hover{
+    color: #f7e2b9;;
+}
+
+.selected{
+    color: #f7e2b9;
+    background-color: blue;
+}
+
+.phoneNumber{
+    width: 20%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+}
+
+.phoneNumber i{
+    margin-right: 10px;
+}
+
+.phoneNumber i:hover{
+    color: #f7e2b9;;
+}
+/* End of navigation */
+
+
+/* Start of Landing Section */
+.landing{
+    height: 75vh;
+    background-color: #f7e2b9;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 25vh;
+    z-index: 10;
+    position: relative;
+    display: flex;
+}
+
+.landingLive{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 40%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landingColor{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-family: 'Merienda', cursive;
+}
+
+.landingLive h3, .landingColor h3{
+    font-size: 6.8rem;
+    font-family: 'Merienda', cursive;
+    color: #5a7262;
+    letter-spacing: 6px;
+}
+
+.landingBottomImg{
+    height: 262px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-image: url(Assets/stripes3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.landingTitle{
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    color: #2a2a2a;
+    position: relative;
+    z-index: 25; 
+}
+
+.landingTitle:nth-of-type(1){
+    padding-top: 13%;
+}
+
+.green{
+    position: absolute;
+    left: 0;
+    top: -200;
+    background-color: #5a7262;
+    width: 100%;
+    /* height: 500px; */
+    height: 60%;
+    z-index: -10;
+}
+
+.paint{
+    /* min-height: 500px; */
+    /* width: 360px; */
+    height: 75%;
+    width: 25%;
+    /* max-width: 380px; */
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 4s;
+    transition-delay: all 19.5s;
+    z-index: 20;
+}
+
+.paint h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 4rem;
+    text-shadow: 4px 5px 8px #2a2a2a;
+    /* height: 380px; */
+    height: 75%;
+    font-family: 'Merienda', cursive;
+}
+
+.bottomPaint{
+    /* height: 120px; */
+    height: 25%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 3px 5px 15px darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px;
+}
+
+.bottomPaint p{
+    padding: 10px;
+    border-bottom: dashed 2px;
+    transition: all 4s;
+    transition-delay: all 19.5s;
+    font-size: 1.4rem;
+    color: #2a2a2a;
+}
+
+.bottomPaint span{
+    font-size: .9rem;
+    color: #2a2a2a;
+}
+/* End of Landing Section */
+
+
+/* Welcome Section */
+.welcome{
+    text-align: center;
+    padding: 200px 80px;
+}
+
+.welcomeCont{
+    width: 45%;
+    margin: 0 auto;
+}
+
+.welcome h3{
+    color: #5a7262;  
+    font-size: 2.5rem;
+}
+
+.welcome p{
+    color: #5a7262;
+    margin: 40px 0;
+    line-height: 1.4rem;
+    font-size: .9rem;
+}
+
+.welcome .btn{
+    text-decoration: none;
+    color: white;
+    background-color: #5a7262;
+    padding: 10px 25px;
+    font-size: .9rem;
+    border: solid 2px #5a7262;
+    transition: all .4s;
+    display: inline-block;
+}
+
+.welcome .btn:hover{
+    color: #5a7262;
+    background-color: white; 
+}
+/* End of Welcome Section */
+
+
+/* Image section */
+.imgSection{
+    height: 70vh;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: -100px;
+}
+
+.staticImg{
+    height: 100%;
+    width: 50%;
+    background-image: url("Assets/paint.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fixedImg{
+    height: 100%;
+    width: 50%;
+    background-image: url("Assets/brush.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* End of Image section */
+
+
+/* Start of Services Section */
+.services{
+    width: 100%;
+    min-height: 60vh;
+    background-color: #fcf0d8;
+}
+
+.services h2{
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 280px;
+    color: #5a7262;
+}
+
+.row{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.rowBox{
+    float: left;
+    text-align: center;
+    width: 20%;
+    height: 450px;
+    margin: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.rowBox h4{
+    margin: 20px 0;
+    font-size: 1.6rem;
+    color: #5a7262;
+}
+
+.rowBox p{
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+    color: #5a7262;
+}
+
+#paletteImg{
+    background-image: url("Assets/palette.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+}
+
+#rgbImg{
+    background-image: url("Assets/rgb.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    margin: 0 auto; 
+}
+
+#paintBucketImg{
+    background-image: url("Assets/paintbucket1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    margin: 0 auto; 
+}
+
+#brushImg{
+    background-image: url("Assets/brush.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    margin: 0 auto; 
+}
+/* Start of Services Section */
