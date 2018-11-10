@@ -7,6 +7,7 @@
     scroll-behavior: smooth;
 }
 
+
 /* Start of navigation */
 .mainNav{
     min-height: 25vh;
@@ -85,16 +86,15 @@
 .middle ul li a{
     text-decoration: none;
     color: white;
-    
+    padding: 10px;
 }
 
 .middle ul li a:hover{
     color: #f7e2b9;;
 }
 
-.selected{
+#selected{
     color: #f7e2b9;
-    background-color: blue;
 }
 
 .phoneNumber{
@@ -111,7 +111,7 @@
 }
 
 .phoneNumber i:hover{
-    color: #f7e2b9;;
+    color: #f7e2b9;
 }
 /* End of navigation */
 
@@ -422,3 +422,39 @@
     margin: 0 auto; 
 }
 /* Start of Services Section */
+
+/* Past Projects */
+
+.pastProjectsHeading{
+    width: 45%;
+    margin: 10rem auto;
+    text-align: center;
+}
+
+.pastProjects h3{
+    color: #5a7262;  
+    font-size: 2.5rem;
+}
+
+.pastProjects p{
+    color: #5a7262;
+    margin: 40px 0;
+    line-height: 1.4rem;
+    font-size: .9rem;
+}
+
+.pastProjects .btn{
+    text-decoration: none;
+    color: white;
+    background-color: #5a7262;
+    padding: 10px 25px;
+    font-size: .9rem;
+    border: solid 2px #5a7262;
+    transition: all .4s;
+    display: inline-block;
+}
+
+.pastProjects .btn:hover{
+    color: #5a7262;
+    background-color: white; 
+}

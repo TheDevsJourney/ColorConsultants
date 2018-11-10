@@ -5,7 +5,7 @@ var paint = document.querySelector(".paint");
 var pBottomBorder = document.querySelector(".bottomPaint p");
 var landingLive = document.querySelector(".landingLive");
 var middleNav = document.querySelectorAll(".middle ul li a")
-
+var currentTarget = document.querySelector("#selected");
 
 var colors = [
     "rgb(73, 113, 175)",
@@ -29,22 +29,18 @@ window.onload = function(){
     }, 2000)
 }
 
+middleNav.forEach(function(el){
+    el.addEventListener("click", function(){
+        currentTarget.removeAttribute("id", "selected");  
+        if(this !== currentTarget){
+            this.id = "selected";
+            currentTarget = this;
+        }  
+    })
+})
+
 function assignColors(){
     bottomPaintTitle.innerHTML = colors[myInd];
     paint.style.backgroundColor = colors[myInd];
     pBottomBorder.style.borderBottomColor = colors[myInd];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Note as a reminder.. Think about cycling through random colors using Math.Random, or adding more static colors to cycle through.
