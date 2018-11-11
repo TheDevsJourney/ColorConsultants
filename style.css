@@ -332,6 +332,7 @@
 /* End of Image section */
 
 
+
 /* Start of Services Section */
 .services{
     width: 100%;
@@ -423,11 +424,11 @@
 }
 /* Start of Services Section */
 
-/* Past Projects */
 
+/* Past Projects */
 .pastProjectsHeading{
     width: 45%;
-    margin: 10rem auto;
+    margin: 8rem auto;
     text-align: center;
 }
 
@@ -458,3 +459,76 @@
     color: #5a7262;
     background-color: white; 
 }
+
+
+/* img grid */
+.imgGrid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    grid-gap: 12px;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+}
+
+.imgGrid div{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    transition: all .5s;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Added pictures to each grid element *grid 4 and 7 changed row / column values* */
+.imgGrid div:nth-child(1){
+    background-image: url("Assets/gal1.jpeg");
+}
+.imgGrid div:nth-child(2){
+    background-image: url("Assets/gal2.jpeg");
+}
+.imgGrid div:nth-child(3){
+    background-image: url("Assets/gal3.jpeg");
+}
+.imgGrid div:nth-child(4){
+    grid-row: 1 / 3;
+    grid-column: 4 / 6;
+    background-image: url("Assets/gal4.jpeg");
+}
+.imgGrid div:nth-child(5){
+    background-image: url("Assets/gal5.jpeg");
+}
+.imgGrid div:nth-child(6){
+    background-image: url("Assets/gal6.jpeg");
+}
+.imgGrid div:nth-child(7){
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+    background-image: url("Assets/gal7.jpeg");
+}
+.imgGrid div:nth-child(8){
+    background-image: url("Assets/gal8.jpeg");
+}
+.imgGrid div:nth-child(9){
+    background-image: url("Assets/gal9.jpeg");
+}
+.imgGrid div:nth-child(10){
+    background-image: url("Assets/gal10.jpeg");
+}
+.imgGrid div:nth-child(11){
+    background-image: url("Assets/gal11.jpeg");
+}
+.imgGrid div:nth-child(12){
+    background-image: url("Assets/gal12.jpeg");
+}
+
+
+/* testing ideas */
+/* .imgGridBGColor{
+    background-color: rgb(61, 61, 61);
+    color: white;
+} */

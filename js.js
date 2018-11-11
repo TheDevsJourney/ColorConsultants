@@ -1,4 +1,5 @@
 var myInd = 0;
+var imgGridStartingIndex = 0;
 var landh1 = document.querySelector(".landing h1");
 var bottomPaintTitle = document.querySelector("#bottomPaintTitle");
 var paint = document.querySelector(".paint");
@@ -6,6 +7,7 @@ var pBottomBorder = document.querySelector(".bottomPaint p");
 var landingLive = document.querySelector(".landingLive");
 var middleNav = document.querySelectorAll(".middle ul li a")
 var currentTarget = document.querySelector("#selected");
+var imgGridDiv = document.querySelectorAll(".imgGrid div");
 
 var colors = [
     "rgb(73, 113, 175)",
@@ -44,3 +46,30 @@ function assignColors(){
     paint.style.backgroundColor = colors[myInd];
     pBottomBorder.style.borderBottomColor = colors[myInd];
 }
+
+// Testing functionality for ideas
+// imgGridDiv.forEach(function(el, ind){
+//     el.addEventListener("click", function(){
+//         console.log(this, ind);
+//         Create an image gallery that opens up when one of these elements is clicked
+//         Whichever image is clicked will set the imgGridStartingIndex to this index
+//         imgGridStartingIndex = ind;
+//         Will be able to cycle through the image gallery, forward and back, by changing the imgGridStartingIndex. 
+//     })
+// })
+
+
+// imgGridDiv.forEach(function(el, ind){
+//     el.addEventListener("mouseover", function(){
+//         this.classList.add("imgGridBGColor");
+//     })
+// })
+
+
+// imgGridDiv.forEach(function(el, ind){
+//     el.addEventListener("mouseout", function(){
+//         setTimeout(function(){
+//             el.classList.remove("imgGridBGColor"); 
+//         }, 100)
+//     })
+// })
