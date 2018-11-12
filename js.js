@@ -7,6 +7,9 @@ var pBottomBorder = document.querySelector(".bottomPaint p");
 var landingLive = document.querySelector(".landingLive");
 var middleNav = document.querySelectorAll(".middle ul li a")
 var currentTarget = document.querySelector("#selected");
+var socialNav = document.querySelector(".social ul");
+var phoneNumber = document.querySelector(".phoneNumber");
+var landingHeight = document.querySelector(".landing");
 var imgGridDiv = document.querySelectorAll(".imgGrid div");
 
 var colors = [
@@ -31,10 +34,28 @@ window.onload = function(){
     }, 2000)
 }
 
+window.onscroll = function(){
+    if(window.pageYOffset > landingHeight.scrollHeight){
+        socialNav.setAttribute(
+            "style", "display: none"
+        )
+        phoneNumber.setAttribute(
+            "style", "display: none"
+        )
+    }else{
+        socialNav.removeAttribute(
+            "style", "display: none"
+        )
+        phoneNumber.removeAttribute(
+            "style", "display: none"
+        ) 
+    }
+}
+
 middleNav.forEach(function(el){
-    el.addEventListener("click", function(){
-        currentTarget.removeAttribute("id", "selected");  
+    el.addEventListener("click", function(){ 
         if(this !== currentTarget){
+            currentTarget.removeAttribute("id", "selected");
             this.id = "selected";
             currentTarget = this;
         }  
@@ -47,6 +68,7 @@ function assignColors(){
     pBottomBorder.style.borderBottomColor = colors[myInd];
 }
 
+
 // Testing functionality for ideas
 // imgGridDiv.forEach(function(el, ind){
 //     el.addEventListener("click", function(){
@@ -55,21 +77,5 @@ function assignColors(){
 //         Whichever image is clicked will set the imgGridStartingIndex to this index
 //         imgGridStartingIndex = ind;
 //         Will be able to cycle through the image gallery, forward and back, by changing the imgGridStartingIndex. 
-//     })
-// })
-
-
-// imgGridDiv.forEach(function(el, ind){
-//     el.addEventListener("mouseover", function(){
-//         this.classList.add("imgGridBGColor");
-//     })
-// })
-
-
-// imgGridDiv.forEach(function(el, ind){
-//     el.addEventListener("mouseout", function(){
-//         setTimeout(function(){
-//             el.classList.remove("imgGridBGColor"); 
-//         }, 100)
 //     })
 // })
