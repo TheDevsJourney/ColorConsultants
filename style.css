@@ -23,6 +23,7 @@
     min-height: 25vh;
     margin: 0 auto;
     display: flex;
+    transition: all .4s;
 }
 
 .social{
@@ -36,6 +37,7 @@
     justify-content: flex-start;
     align-items: center;
     list-style-type: none;
+    transition: all .3s linear;
 }
 
 .social ul li{
@@ -53,6 +55,7 @@
 
 .middle{
     width: 60%;
+    margin: 0 auto;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -61,6 +64,10 @@
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+.middle p{
+    transition: all .3s linear;
 }
 
 .midCol{
@@ -73,6 +80,7 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: 2rem;
+    transition: all .3s linear;
 }
 
 .middle ul{
@@ -82,6 +90,7 @@
     list-style-type: none;
     margin-top: 40px;
     width: 80%;
+    transition: all .3s linear;
 }
 
 .middle ul li{
@@ -109,6 +118,7 @@
     align-items: center;
     justify-content: flex-end;
     color: white;
+    transition: all .3s linear;
 }
 
 .phoneNumber i{
@@ -118,6 +128,12 @@
 .phoneNumber i:hover{
     color: #f7e2b9;
 }
+
+.removeNavElements{
+    z-index: -100;
+    opacity: 0;
+    display: none;
+}
 /* End of navigation */
 
 
@@ -125,12 +141,16 @@
 .landing{
     height: 75vh;
     background-color: #f7e2b9;
-    width: 90%;
+    max-width: 90%;
     margin: 0 auto;
     margin-top: 25vh;
     z-index: 10;
     position: relative;
     display: flex;
+}
+
+.mobileBreathe{
+    display: none;
 }
 
 .landingLive{
@@ -209,11 +229,9 @@
 }
 
 .paint{
-    /* min-height: 500px; */
-    /* width: 360px; */
     height: 75%;
     width: 25%;
-    /* max-width: 380px; */
+    /* max-width: 340px; */
     margin: 0 auto;
     position: absolute;
     bottom: 0;
@@ -225,6 +243,7 @@
 }
 
 .paint h3{
+    padding: 0 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -270,7 +289,7 @@
 /* Welcome Section */
 .welcome{
     text-align: center;
-    padding: 200px 80px;
+    padding: 200px 0px;
 }
 
 .welcomeCont{
@@ -474,7 +493,7 @@
     grid-gap: 12px;
     max-width: 90%;
     margin: 0 auto;
-    margin-bottom: 10%;
+    margin-bottom: 6%;
 }
 
 .imgGrid div{
@@ -716,4 +735,172 @@ footer{
     padding: 30px;
     font-size: .8rem;
     color: #5a7262;
+}
+
+/* Nav media queries */
+
+@media(max-width: 1250px){
+   .paint{
+        min-width: 280px;
+        min-height: 400px;
+        font-size: .4rem;
+   }
+   .landingLive h3, .landingColor h3{
+        display: none;
+    }
+   
+   /* .mobileLanding{
+       display: flex;
+       flex-direction: column;
+       height: 100%;
+       width: 100%;
+       text-align: center;
+   }
+
+    .landingLive h3, .landingColor h3{
+        font-size: 5.4rem;
+        font-family: 'Merienda', cursive;
+        color: #5a7262;
+        letter-spacing: 6px;
+    }
+
+    .landingLive{
+        height: 45%;
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .landingColor{
+        height: 50%;
+        position: static;
+        width: 100%;
+    }
+
+    .mobileBreathe{
+        display: inline;
+        font-size: 3.6rem;
+        z-index: 20;
+        text-shadow: 3px 5px 4px #e7d3ab;
+        color: white;
+        margin: 0 auto;
+        padding: 15px;
+    } */
+
+    .rowBox{
+        width: 40%;
+        height: 290px;
+        margin: 0 5%;
+    }
+
+    .contactInfo{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contactInfo p{
+        margin-bottom: 4px;
+    }
+    
+    .contactInfo ul{
+        margin-top: 4px;
+    }
+
+    .contactInfo ul li{
+        margin-left: 0px;
+    }
+
+    .contactInfo ul li:nth-of-type(2){
+        padding: 0 15px;
+    }
+
+    .welcomeCont{
+        width: 80%;
+    }
+
+    .welcome{
+        padding: 140px 0px;
+    }
+
+    .pastProjectsHeading{
+        width: 80%;
+    }
+
+    /* Navigation */
+    .social{
+        display: none;
+    }
+
+    .phoneNumber{
+        display: none;
+    }
+
+    .middle{
+        width: 86%;
+    }
+
+    .middle p{
+        display: none;
+    }
+
+    .middle h1{
+        margin-bottom: 15px;
+    }
+
+    .middle ul{
+        margin-top: 2px;
+    }
+
+    .middle ul li{
+        padding: 0 4px;
+    }
+
+    .mainNav{
+        min-height: 15vh;
+    }
+
+    .cont{
+        min-height: 15vh;
+    }
+
+    .landing{
+        margin-top: 15vh;
+    }
+}
+
+@media(max-width: 850px){
+    .rowBox{
+        width: 80%;
+        height: 260px;
+        margin: 8% 10%;
+        padding: 5px;
+    }
+    .imgSection{
+        height: 70vh;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -100px;
+    } 
+    .staticImg{
+        height: 100%;
+        width: 100%;
+        background-image: url("Assets/paint.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    } 
+    .fixedImg{
+        height: 100%;
+        width: 100%;
+        background-image: url("Assets/brush.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .welcome{
+        padding: 120px 0px;
+    }
 }
