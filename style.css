@@ -497,7 +497,6 @@
 }
 
 .imgGrid div{
-    /* padding: 30px; */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -506,7 +505,7 @@
 .imgGridHover{
     height: 100%;
     width: 100%;
-    background-color: rgb(126, 126, 226);
+    background-color: rgba(43, 43, 43, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -514,6 +513,7 @@
     opacity: 0;
     transition: all .4s;
     cursor: pointer;
+    font-size: 2.2rem;
 }
 
 .imgGrid div:hover .imgGridHover{
@@ -737,8 +737,85 @@ footer{
     color: #5a7262;
 }
 
-/* Nav media queries */
 
+/* Image Gallery */
+
+.seeProjects{
+    cursor: pointer;
+}
+
+.imageGallery{
+    position: fixed;
+    background-color: rgba(68, 68, 67, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; 
+    box-shadow: 2px 4px 16px #2a2a2a;
+    display: none;
+}
+
+.imageGalleryHead{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 40px;
+    background-color: #5a7262;
+    justify-content: space-between;
+    align-items: center; 
+    z-index: 200;
+    box-shadow: 2px 4px 16px #2a2a2a;
+}
+
+.imageGalleryHead i{
+    font-size: 2.4rem;
+    cursor: pointer;
+    color: #f7e2b9;
+}
+
+.imageGalleryHead h2{
+    font-size: 2.4rem;
+    font-family: 'Merienda', cursive;
+    font-weight: 700;
+    color: #f7e2b9;
+}
+
+.imageGalleryBody{
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #f8fdf7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftArrow, .rightArrow{
+    padding: 0 5px;
+    font-size: 2.6rem;
+    color: #5a7262;
+    cursor: pointer;
+    transition: opacity .4s ease;
+}
+
+.imageGalleryPhotos{
+    height: 500px;
+    width: 600px;
+    box-shadow: 4px 10px 62px #585858;
+    margin: 0 40px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* End of Image Gallery */
+
+
+/* Nav media queries */
 @media(max-width: 1250px){
    .paint{
         min-width: 280px;
@@ -836,7 +913,7 @@ footer{
     }
 
     .middle{
-        width: 86%;
+        width: 90%;
     }
 
     .middle p{
@@ -865,6 +942,7 @@ footer{
 
     .landing{
         margin-top: 15vh;
+        height: 85vh;
     }
 }
 

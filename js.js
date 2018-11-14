@@ -25,6 +25,16 @@ var contact = document.querySelector(".contact");
 
 var mobileBreathe = document.querySelector(".mobileBreathe");
 
+
+// Varibles for image gallery
+var imageGallery = document.querySelector(".imageGallery");
+var imageGalleryPhotos = document.querySelector(".imageGalleryPhotos");
+var imageGalleryExit = document.querySelector(".imageGalleryHead i")
+var rightArrow = document.querySelector(".rightArrow");
+var leftArrow = document.querySelector(".leftArrow");
+var imageInd = 0;
+var seeProjects = document.querySelectorAll(".seeProjects");
+
 var colors = [
     "rgb(73, 113, 175)",
     "rgb(156, 106, 119)",
@@ -32,6 +42,93 @@ var colors = [
     "rgb(149, 210, 183)",
     "rgb(214, 170, 169)"
 ]
+
+var images = [
+    "url(\"Assets/gal1.jpeg\")",
+    "url(\"Assets/gal2.jpeg\")",
+    "url(\"Assets/gal3.jpeg\")",
+    "url(\"Assets/gal4.jpeg\")",
+    "url(\"Assets/gal5.jpeg\")",
+    "url(\"Assets/gal6.jpeg\")",
+    "url(\"Assets/gal7.jpeg\")",
+    "url(\"Assets/gal8.jpeg\")",
+    "url(\"Assets/gal9.jpeg\")",
+    "url(\"Assets/gal10.jpeg\")",
+    "url(\"Assets/gal11.jpeg\")",
+    "url(\"Assets/gal12.jpeg\")"
+]
+
+seeProjects.forEach(function(btn){
+    btn.addEventListener("click", function(){
+        imageInd = 0;
+        imageGalleryPhotos.style.backgroundImage = images[imageInd];
+        checkImageInd();
+        imageGallery.setAttribute(
+            "style", "display: block"
+        )
+    })
+})
+
+imgGridDiv.forEach(function(el, ind){
+    el.addEventListener("click", function(){
+        imageInd = Number(ind);
+        imageGalleryPhotos.style.backgroundImage = images[imageInd];
+        checkImageInd();
+        imageGallery.setAttribute(
+            "style", "display: block"
+        )
+    })
+})
+
+imageGalleryExit.addEventListener("click", function(){
+    imageGallery.setAttribute(
+        "style", "display: none"
+    )
+})
+
+rightArrow.addEventListener("click", function(){
+    if(imageInd < 11){
+        imageInd++;
+        imageGalleryPhotos.style.backgroundImage = images[imageInd];
+        checkImageInd();
+    }
+})
+
+leftArrow.addEventListener("click", function(){
+    if(imageInd > 0){
+        imageInd--;
+        imageGalleryPhotos.style.backgroundImage = images[imageInd];
+        checkImageInd();
+    }
+})
+
+function checkImageInd(){
+    function checkImageIndZero(){
+        if(imageInd === 0){
+            leftArrow.setAttribute(
+                "style", "opacity: 0; cursor: initial"
+            )
+        }else{
+            leftArrow.removeAttribute(
+                "style", "opacity: 0; cursor: initial"
+            )
+        }
+    }
+    
+    function checkImageIndMax(){
+        if(imageInd === 11){
+            rightArrow.setAttribute(
+                "style", "opacity: 0; cursor: initial"
+            )
+        }else{
+            rightArrow.removeAttribute(
+                "style", "opacity: 0; cursor: initial"
+            )
+        }
+    }
+    checkImageIndZero();
+    checkImageIndMax();
+}
 
 assignColors();
 
@@ -133,13 +230,3 @@ function removeNavStyles(){
     ) 
 }
 
-// Testing functionality for ideas
-imgGridDiv.forEach(function(el, ind){
-    el.addEventListener("click", function(){
-        console.log(this, ind);
-        // Create an image gallery that opens up when one of these elements is clicked
-        // Whichever image is clicked will set the imgGridStartingIndex to this index
-        // imgGridStartingIndex = ind;
-        // Will be able to cycle through the image gallery, forward and back, by changing the imgGridStartingIndex. 
-    })
-})
