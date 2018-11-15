@@ -810,6 +810,7 @@ footer{
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
+    margin-bottom: 10vh;
 }
 
 /* End of Image Gallery */
@@ -822,48 +823,11 @@ footer{
         min-height: 400px;
         font-size: .4rem;
    }
+
    .landingLive h3, .landingColor h3{
         display: none;
     }
    
-   /* .mobileLanding{
-       display: flex;
-       flex-direction: column;
-       height: 100%;
-       width: 100%;
-       text-align: center;
-   }
-
-    .landingLive h3, .landingColor h3{
-        font-size: 5.4rem;
-        font-family: 'Merienda', cursive;
-        color: #5a7262;
-        letter-spacing: 6px;
-    }
-
-    .landingLive{
-        height: 45%;
-        position: static;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .landingColor{
-        height: 50%;
-        position: static;
-        width: 100%;
-    }
-
-    .mobileBreathe{
-        display: inline;
-        font-size: 3.6rem;
-        z-index: 20;
-        text-shadow: 3px 5px 4px #e7d3ab;
-        color: white;
-        margin: 0 auto;
-        padding: 15px;
-    } */
-
     .rowBox{
         width: 40%;
         height: 290px;
@@ -980,5 +944,32 @@ footer{
 
     .welcome{
         padding: 120px 0px;
+    }
+
+    /* Image gallery media */    
+    .imageGalleryHead{
+        width: 100%;
+    }
+    
+    .imageGalleryHead i, .imageGalleryHead h2{
+        font-size: 2rem;
+    }
+    
+    .imageGalleryBody{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .imageGalleryPhotos{
+        height: 230px;
+        min-width: 220px;
+        margin: 0 0;
+        margin-bottom: 10vh;
+    }
+
+    .leftArrow, .rightArrow{
+        margin: 0 18px;
+        font-size: 2.2rem;
+        margin-bottom: 10vh;
     }
 }
